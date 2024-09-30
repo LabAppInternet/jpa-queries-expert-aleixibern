@@ -18,5 +18,6 @@ public interface JourneyRepository extends JpaRepository<Journey, JourneyId> {
 
     Optional<Journey> findJourneyByOriginNameAndDestinationName(String origin, String destination);
 
-    Optional<Journey> findJourneyIdByOriginNameAndDestinationName(String origin, String destination);
+    @Query("SELECT j.id from Journey j where j.origin.name = :origin and j.destination.name = :destination")
+    Optional<JourneyId> findJourneyIdByOriginNameAndDestinationName(String origin, String destination);
 }
