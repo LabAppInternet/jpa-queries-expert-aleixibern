@@ -16,6 +16,7 @@ public class MapperHelper {
         return userDTO;
     }
 
+
     public static FavoriteJourneyDTO favoriteJourneyToFavoriteJourneyDTO(FavoriteJourney favoriteJourney) {
         FavoriteJourneyDTO favoriteJourneyDTO = new FavoriteJourneyDTO();
         favoriteJourneyDTO.setDestination(favoriteJourney.getJourney().getDestination().getName());
